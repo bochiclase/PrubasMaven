@@ -29,7 +29,7 @@
       
       <!-- Que hace Hibernate cuando no encuentra las tablas en a base de datos -->
       <property name="hibernate.hbm2ddl.auto" value="update" />
-      
+       
       <!--  
       	<property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
    	  -->

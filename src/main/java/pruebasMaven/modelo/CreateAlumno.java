@@ -19,7 +19,7 @@ public class CreateAlumno {
 		entityManager.getTransaction().commit();
 		entityManager.close();		
 		
-		
+		 
 	}
 
 }

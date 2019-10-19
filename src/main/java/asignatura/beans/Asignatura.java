@@ -12,7 +12,7 @@ public class Asignatura {
 		@Column
 		private int id;
 		
-		
+		 
 		@Column(name="Asignatura")
 		private String asignatura;
 

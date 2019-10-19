@@ -24,7 +24,7 @@ public class AlumnoBean {
 	
 	
 	
-	
+	 
 	public long getId() {
 		return id;
 	}
