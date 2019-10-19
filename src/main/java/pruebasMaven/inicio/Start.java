@@ -1,5 +1,8 @@
 package pruebasMaven.inicio;
 
+
+import asignatura.beans.Asignatura;
+import asignatura.modelo.CreateAsignatura;
 import pruebasMaven.modelo.CreateAlumno;
 import pruebasMaven.negocio.AlumnoBean;
 
@@ -13,6 +16,14 @@ public class Start {
 		
 		CreateAlumno create = new CreateAlumno();
 		create.create(alumno);
+		
+		
+		Asignatura asig = new Asignatura();
+		asig.setAsignatura("Matematicas");
+		
+		
+		CreateAsignatura createAsig = new CreateAsignatura();
+		createAsig.create(asig);
 	}
 
 }

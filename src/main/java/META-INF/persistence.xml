@@ -5,6 +5,42 @@
   
 
 
+ 		<!-- Mi persisencia para Asignatura -->
+  <persistence-unit name="com.marcos.pruebasMaven.H2DataBase" transaction-type="RESOURCE_LOCAL">
+    
+    <!-- Framework proveedor del servicio de acceso a los datos -->
+  	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    
+    <!-- Clase que vamos a referenciar (paquete y nombre sin .java o .class EJEMPLO -->
+    <class>asignatura.beans.Asignatura</class>
+
+    <properties>
+      <!-- Depende del tipo de base de datos que queramos conectar -->
+      <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
+      <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/prueba" />
+      <property name="javax.persistence.jdbc.user" value="sa" />
+      <property name="javax.persistence.jdbc.password" value="" />
+      
+      <!-- Log de sentencias SQL -->
+      <property name="hibernate.show_sql" value="true"/>
+      
+      <!-- Dialecto que comunica la base de datos con Hibernate -->
+      <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+      
+      <!-- Que hace Hibernate cuando no encuentra las tablas en a base de datos -->
+      <property name="hibernate.hbm2ddl.auto" value="update" />
+      
+      <!--  
+      	<property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
+   	  -->
+    </properties>
+  </persistence-unit>
+
+
+
+
+
+
 
   <persistence-unit name="com.marcos.pruebasMaven.H2" transaction-type="RESOURCE_LOCAL">
     
