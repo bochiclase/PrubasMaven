@@ -17,7 +17,8 @@ public class CreateAlumno {
 		entityManager.getTransaction().begin();
 		entityManager.persist(alumno);
 		entityManager.getTransaction().commit();
-		entityManager.close();		
+		entityManager.close();	
+		System.out.println("Entro en alumno");
 		
 		 
 	}

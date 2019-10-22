@@ -14,8 +14,20 @@ public class Start {
 		alumno.setNombre("Marcos");
 		alumno.setTelefono("666555444333");
 		
-		CreateAlumno create = new CreateAlumno();
-		create.create(alumno);
+		CreateAlumno meter_en_DB = new CreateAlumno();
+		meter_en_DB.create(alumno);
+		
+		/*
+		AlumnoBean alumno2 = new AlumnoBean();
+		alumno2.setNombre("Bocheti");
+		alumno2.setTelefono("123123123");
+		
+		
+		meter_en_DB.create(alumno);
+		*/
+		
+		
+		
 		
 		
 		Asignatura asig = new Asignatura();

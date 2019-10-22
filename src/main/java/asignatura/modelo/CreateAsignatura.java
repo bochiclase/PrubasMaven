@@ -11,13 +11,14 @@ public class CreateAsignatura {
 public void create(Asignatura asignatura) {
 		
 		
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.marcos.pruebasMaven.H2");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.marcos.pruebasMaven.H2DataBase");
 		EntityManager entityManager = emf.createEntityManager();
 		
 		entityManager.getTransaction().begin();
 		entityManager.persist(asignatura);
 		entityManager.getTransaction().commit();
-		entityManager.close();		
+		entityManager.close();
+		System.out.print("Accede aqui");
 		
 		 
 	}
