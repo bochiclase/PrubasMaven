@@ -5,7 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import asignatura.beans.Asignatura;
 
 @Entity
 @Table(name="alumno")
@@ -21,6 +24,11 @@ public class AlumnoBean {
 	
 	@Column(name="telefono")
 	private String telefono;
+	
+	
+	@ManyToOne
+	
+	private Asignatura asignatura;
 	
 	
 	

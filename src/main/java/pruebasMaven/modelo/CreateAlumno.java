@@ -7,17 +7,16 @@ import javax.persistence.Persistence;
 import pruebasMaven.negocio.AlumnoBean;
 
 public class CreateAlumno {
+	
 
 	public void create(AlumnoBean alumno) {
 		
 		
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.marcos.pruebasMaven.H2DataBase");
-		EntityManager entityManager = emf.createEntityManager();
-		
+	
+		EntityManager entityManager = Singelton.getEntityManager();
 		entityManager.getTransaction().begin();
 		entityManager.persist(alumno);
 		entityManager.getTransaction().commit();
-		entityManager.close();	
 		System.out.println("Entro en alumno");
 		
 		 
